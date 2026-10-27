@@ -1,0 +1,40 @@
+[package]
+name = "discord-lite"
+version = "1.0.0"
+edition = "2021"
+description = "Discord-Lite — client Discord ultra léger (WebView2), sans télémétrie"
+license = "MIT"
+
+[[bin]]
+name = "discord-lite"
+path = "src/main.rs"
+
+[dependencies]
+tao = "0.37"
+wry = { version = "0.57", features = ["devtools"] }
+webview2-com = "0.39"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tray-icon = "0.26.1"
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_IO",
+    "Win32_System_Pipes",
+    "Win32_System_ProcessStatus",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[build-dependencies]
+winresource = "0.1.34"
