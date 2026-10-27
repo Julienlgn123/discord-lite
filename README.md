@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/wordmark.svg" height="72" alt="Discord Lite"></p>
+
 # Discord-Lite
 
 Client Discord ultra léger pour Windows : le client web officiel (discord.com/app) dans une coquille Rust + WebView2. Pas d'Electron, pas de Node — un exe de < 1 Mo.
