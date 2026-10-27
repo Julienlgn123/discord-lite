@@ -21,3 +21,7 @@ cargo build --release
 Test isolé : `DISCORD_LITE_PROFILE=bench DISCORD_LITE_CDP=9335 discord-lite.exe --background`.
 
 Projet non officiel, non affilié à Discord Inc.
+
+## Licence
+
+[MIT](LICENSE)
